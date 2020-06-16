@@ -11,10 +11,13 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 const modules = [
   MatCardModule,
   MatFormFieldModule,
+  MatToolbarModule,
   MatSidenavModule,
   MatListModule,
   MatSlideToggleModule,
@@ -25,6 +28,8 @@ const modules = [
   MatToolbarModule,
   MatIconModule,
   MatGridListModule,
+  MatNativeDateModule
+  MatDatepickerModule,
 ];
 @NgModule({
   declarations: [],

@@ -1,0 +1,10 @@
+:host {
+  font-family: "Roboto Condensed", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 500px;
+}
+
+.header-item {
+  font-size: 0.9rem;
+}
