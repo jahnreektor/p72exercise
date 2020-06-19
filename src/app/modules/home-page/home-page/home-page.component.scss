@@ -1,0 +1,35 @@
+mat-grid-tile {
+  background: #2a2e38;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 80px 80px 80px 80px 80px;
+  grid-template-areas:
+    "stocks stocks summary"
+    "stocks stocks summary"
+    "stocks stocks fundamentals"
+    "stocks stocks fundamentals"
+    "stocks stocks fundamentals";
+  grid-gap: 16px;
+
+  > * {
+    background: #2a2e38;
+    padding: 16px;
+  }
+
+  padding: 0 48px;
+}
+
+app-widget-stock-graph {
+  grid-area: stocks;
+}
+
+app-widget-summary-statistics {
+  grid-area: summary;
+}
+
+app-widget-fundamentals {
+  grid-area: fundamentals;
+}

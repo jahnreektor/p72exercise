@@ -10,6 +10,11 @@ const routes: Routes = [
         (m) => m.HomePageModule
       ),
   },
+  {
+    path: 'audit',
+    loadChildren: () =>
+      import('./audit/audit.module').then((m) => m.AuditModule),
+  },
 ];
 
 @NgModule({

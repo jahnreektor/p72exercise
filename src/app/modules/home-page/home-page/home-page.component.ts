@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+
 export interface Tile {
   color: string;
   cols: number;

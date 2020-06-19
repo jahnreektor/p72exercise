@@ -1,28 +1,103 @@
 @import "~@angular/material/theming";
 
-$custom-orange: (50: #fff3e0, 100: #ffe0b2, 200: #ffcc80, 300: #ffb74d, 400: #ffa726, 500: #ff9800, 600: #fb8c00, 700: #f57c00, 800: #ef6c00, 900: #e65100, A100: #ffd180, A200: #ffab40, A400: #ff9100, A700: #ff6d00, contrast: (50: $black-87-opacity, 100: $black-87-opacity, 200: $black-87-opacity, 300: $black-87-opacity, 400: $black-87-opacity, 500: white, 600: white, 700: white, 800: white, 900: white, A100: $black-87-opacity, A200: $black-87-opacity, A400: $black-87-opacity, A700: white));
+$custom-orange: (
+  50: #fff3e0,
+  100: #ffe0b2,
+  200: #ffcc80,
+  300: #ffb74d,
+  400: #ffa726,
+  500: #ff9800,
+  600: #fb8c00,
+  700: #f57c00,
+  800: #ef6c00,
+  900: #e65100,
+  A100: #ffd180,
+  A200: #ffab40,
+  A400: #ff9100,
+  A700: #ff6d00,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: $black-87-opacity,
+    A700: white,
+  ),
+);
 $point72-primary: mat-palette($custom-orange);
 $point72-accent: mat-palette($mat-green, A200, A100, A400);
 $point72-warn: mat-palette($mat-red);
-$point72-theme: mat-dark-theme($point72-primary, $point72-accent, $point72-warn);
+$point72-theme: mat-dark-theme(
+  $point72-primary,
+  $point72-accent,
+  $point72-warn
+);
 
 //custom background color
 $qf-background-color: red;
 $background: map-get($point72-theme, background);
-$background: map_merge($background, (background: $qf-background-color));
-$point72-theme: map_merge($point72-theme, (background: $background));
+$background: map_merge(
+  $background,
+  (
+    background: $qf-background-color,
+  )
+);
+$point72-theme: map_merge(
+  $point72-theme,
+  (
+    background: $background,
+  )
+);
 
 @include angular-material-theme($point72-theme);
 
 /* You can add global styles to this file, and also import other style files */
+$purple: #6b4ddc;
+$background: #252830;
+html,
+body {
+  height: 100%;
+}
 
-html, body {
-    height: 100%;
+.mat-datepicker-content {
+  background: $background;
+  box-shadow: inset 0px 0px 0px 0.1rem $purple;
+  // border: 0.1rem solid $purple;
+  margin-top: 10px;
 }
 
 body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    background: #252830;
-    color: white;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #252830;
+  color: white;
+}
+
+h1 {
+  font-family: "Spectral", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  height: 35px;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  border: none;
+  background: $purple;
+  align-items: center;
+  border-radius: 2px;
 }

@@ -28,7 +28,7 @@ const modules = [
   MatToolbarModule,
   MatIconModule,
   MatGridListModule,
-  MatNativeDateModule
+  MatNativeDateModule,
   MatDatepickerModule,
 ];
 @NgModule({

@@ -1,12 +1,26 @@
-<mat-grid-list cols="3" rowHeight="80px" gutterSize="16px">
-  <mat-grid-tile
-    *ngFor="let tile of tiles"
-    [colspan]="tile.cols"
-    [rowspan]="tile.rows"
-    [style.background]="tile.color"
+<!-- <highcharts-chart
+  [Highcharts]="Highcharts"
+  [options]="chartOptions"
+  style="width: 100%; height: 400px; display: block;"
+></highcharts-chart> -->
+
+<div class="dashboard">
+  <app-widget-stock-graph></app-widget-stock-graph>
+  <app-widget-summary-statistics></app-widget-summary-statistics>
+  <app-widget-fundamentals></app-widget-fundamentals>
+</div>
+<!-- <div style="display: block;">
+  <canvas
+    baseChart
+    width="400"
+    height="400"
+    [datasets]="lineChartData"
+    [labels]="lineChartLabels"
+    [options]="lineChartOptions"
+    [colors]="lineChartColors"
+    [legend]="lineChartLegend"
+    [chartType]="lineChartType"
+    [plugins]="lineChartPlugins"
   >
-    {{ tile.text }}
-  </mat-grid-tile>
-</mat-grid-list>
-<app-widget-summary-statistics></app-widget-summary-statistics>
-<app-test-toolbar> </app-test-toolbar>
+  </canvas>
+</div> -->
